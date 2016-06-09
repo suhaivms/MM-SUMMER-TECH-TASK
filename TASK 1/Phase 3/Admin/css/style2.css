@@ -1,0 +1,87 @@
+body{
+	background: url(../../img/bg-pattern.png);
+	
+}
+
+
+.container{
+	margin-bottom: 10px;
+
+}
+
+.name{
+	background:#666666;
+	color:white;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-left: 20px;
+	border-radius: 30px;
+	margin-top: 4px;
+}
+
+.admin{
+	border: solid;
+	border-width: 0.5px;
+	margin-top: 10%;
+	margin-right: 37%;
+	margin-left: 37%;
+	padding: 20px;
+
+}
+
+
+ #ad{
+	padding-left: 60px;
+}
+
+.button-admin{
+	margin-left: 35%;
+}
+
+.admin_pannel_head{
+	padding-left: 35%;
+	
+	margin-bottom: 1%;
+
+}
+
+.button-admin-pannel{
+		margin-left: 37%;
+		margin-top: 2%;
+		height: 200px;
+		width: 200px;
+}
+
+
+footer{
+	
+	margin-top: 10px;
+	
+	font-size: 12px;
+}
+
+
+
+@media screen and (max-width: 700px){
+	.container{
+		width:100%;
+	}
+	
+}
+
+
+
+@media screen and (max-width: 700px){
+	.comtainer{
+		float:none;
+	}
+	.admin{
+		width: 60%;
+	}
+
+}
+
+
+
+
+
