@@ -58,7 +58,7 @@ try {
 			<div class="container">
 			<div class="row">
 				<!-- NAVBAR -->
-				<div class="col-md-9">
+				<div class="col-md-12">
 					<nav class="navbar navbar-default">
 					  <div class="container-fluid">
 					    
@@ -72,10 +72,7 @@ try {
 					  </div>
 					</nav>
 				</div>
-				<!-- SEARCH -->
-				<div class="col-md-3 ser">
-					<input type="text" class="form-control" placeholder="Search Access" />
-				</div>
+				
 			</div>
 		</header>
 		<div class="container">
