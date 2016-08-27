@@ -1,0 +1,189 @@
+
+body{
+	background: url(../img/bg-pattern.png);
+	
+}
+
+
+
+.container{
+	margin-bottom: 10px;
+
+}
+
+.nam{
+	background:#666666;
+	color:white;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-left: 20px;
+	border-radius: 30px;
+	margin-top: -20px;
+}
+
+
+.name{
+	background:#666666;
+	color:white;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-left: 20px;
+	border-radius: 30px;
+	margin-top: 4px;
+}
+
+
+.ser{
+	margin-top: 15px;
+}
+
+.leftnav{
+	
+	
+	 
+	font-size: 12px;
+}
+
+.leftnav img{
+	width: 240px;
+	padding: 5px;
+}
+
+.left p, h6{
+	padding-left: 7px;
+}
+
+
+.rightnav {
+	float: right;
+	
+	font-size: 12px;
+	
+}
+
+
+a{
+	color: #000000;
+}
+
+
+.other img{
+	width:170px;
+	height: 130px;
+	padding-top: 10px;
+
+
+}
+
+.mid{
+	margin-left: 2%;
+	width:55%;
+}
+
+
+article{
+	text-align: justify;
+}
+
+
+.article-edit{
+	padding-left: 35%;
+	padding-top: 1%;
+	margin-bottom: 5%;
+}
+
+.art img{
+	width:750px;
+
+}
+
+
+footer{
+	
+	margin-top: 10px;
+	
+	font-size: 12px;
+}
+
+
+
+
+.button-edit{
+	margin-left: 92%;
+}
+
+
+
+footer a{
+
+	color: blue;
+}
+
+
+.foot{
+	margin-top: 150px;
+}
+
+div.col-md-8 textarea.dde {
+		height:400px;
+		min-height: 300px;
+		max-height: 400px;
+		margin-bottom:2%; 
+	}
+
+
+
+
+.left-edit{
+	padding-left: 25%;
+	margin-bottom: 2%;
+	
+}
+
+
+
+
+
+
+@media screen and (max-width: 700px){
+	.container{
+		width:100%;
+	}
+	
+}
+
+
+
+@media screen and (max-width: 700px){
+	.comtainer{
+		float:none;
+	}
+	.admin{
+		width: 60%;
+	}
+	.button-edit{
+		margin-left: 60%;
+	}
+	.ser{
+		margin-bottom: 5%;
+	}
+	.main-article img{
+		max-width: 100%;
+
+	}
+
+	.upload{
+		margin-top: 1%;
+	}
+	.browse{
+		float: right;
+		margin: 1% 35% 1% 0;
+
+}
+
+
+
+
+
+
+
