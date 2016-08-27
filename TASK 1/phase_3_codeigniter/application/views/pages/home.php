@@ -1,4 +1,4 @@
-<div class='container'>
+
 	<div class="col-md-3 leftnav">
 						<div class="well">		
 							<div class="row">

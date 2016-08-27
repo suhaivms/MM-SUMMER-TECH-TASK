@@ -23,5 +23,20 @@ class Website extends CI_Controller {
 	        $this->load->view('templates/footer');
         }
 
-       
+         public function view($id= NULL)
+        {
+        $data['article'] = $this->website_model->get_article($id);
+
+        if (empty($data['article']))
+        {
+                show_404();
+        }
+
+        $data['title'] = $data['article']['title'];
+
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('pages/article', $data);
+        $this->load->view('templates/footer');
+    }
 }

@@ -76,7 +76,7 @@ class Login_model extends CI_Model{
             // Update Query For Selected Student
         public function update_article_id1($id,$data){
             $this->db->where('id', $id);
-            $this->db->update('articles', $data);
+            $this->db->update('article', $data);
         }
 }
 ?>

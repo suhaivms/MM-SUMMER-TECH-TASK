@@ -104,7 +104,21 @@ class Login extends CI_Controller{
             }
         }
 
-        
+        public function edit1($id=NULL)
+        {
+            if($id!==NULL)
+            {
+              
+            $data['article']=$this->login_model->get_article($id);
+            $data['single_article'] = $this->login_model->show_article_id($id);
+            $this->load->view('templates/header');
+            $this->load->view('templates/logout');
+            $this->load->view('pages/article',$data);
+            $this->load->view('templates/footer',$data);
+
+
+            }
+        }
         /* public function show_article_id() {
                 $id = $this->uri->segment(3);
                 $data['articles'] = $this->login_model->show_article();
@@ -116,10 +130,11 @@ class Login extends CI_Controller{
                 $id= $this->input->post('id');
                 $data = array(
                 'title' => $this->input->post('title'),
-                'date' => $this->input->post('date')
+                'date' => $this->input->post('date'),
+                'article'=>$this->input->post('article')
                 );
-                $this->login_model->update_article($id,$data);
-                $this->show_article_id();
+                $this->login_model->update_article_id1($id,$data);
+                $this->edit1($id);
             }
 }
 ?>

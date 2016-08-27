@@ -1,6 +1,5 @@
 
-		<div class="container">
-
+		
 				<!--1st column-->
 				<div class="row">
 					<div class="nam">
@@ -21,8 +20,8 @@
 							</div>
 							<div class="row">
 							  	
-							    	<a href="article.php?id=4" class="thumbnail">
-							     	 <img src="#" alt="BJP's Roopa Ganguly Attacked, Allegedly By Trinamool Workers Near Kolkata">
+							    	<a href="#" class="thumbnail">
+							     	 <img src="<?php echo site_url('img/National/2.jpg');?>" alt="BJP's Roopa Ganguly Attacked, Allegedly By Trinamool Workers Near Kolkata">
 							     	 <div class="caption">
 								        
 								        <p>BJP's Roopa Ganguly Attacked, Allegedly By Trinamool Workers Near Kolkata</p>
@@ -33,8 +32,8 @@
 							 </div>
 							 <div class="row">
 							  
-							    	<a href="article.php?id=10" class="thumbnail">
-							     	 <img src="#" alt="Former Delhi Top Cop Kiran Bedi Appointed Puducherry Lieutenant Governor">
+							    	<a href="#" class="thumbnail">
+							     	 <img src="<?php echo site_url('img/National/3.jpg');?>" alt="Former Delhi Top Cop Kiran Bedi Appointed Puducherry Lieutenant Governor">
 							     	 <div class="caption">
 								        
 								        <p>Former Delhi Top Cop Kiran Bedi Appointed Puducherry Lieutenant Governor</p>

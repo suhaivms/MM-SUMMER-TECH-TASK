@@ -21,18 +21,17 @@
 
 				<?php foreach ($single_article as $article): ?>
 
-				<form action="<?php echo site_url('index.php/login/edit'); ?>" method="post">
-				
+				<form action="<?php echo site_url('index.php/login/update_article_id1'); ?>" method="post">
 				
 				<div class="row">
 					<div class="col-md-4 left-edit">
 						<h4><strong>ID</strong></h4>
 					</div>
 					<div class="col-md-8">
-						
-						<input type="text" id="hide" name="id" value="<?php echo $article->id; ?>">
+						<input type="text" name="id" class="form-control" readonly value="<?php echo $article->id; ?>"/>
 					</div>
 				</div>
+				
 				<div class="row">
 					<div class="col-md-4 left-edit">
 						<h4><strong>TITLE</strong></h4>
@@ -54,9 +53,10 @@
 					<div class="col-md-4 left-edit">
 						<h4><strong>CONTENT</strong></h4>
 					</div>
+
 					<div class="col-md-8">
-						<textarea type="text"  placeholder="" class="form-control dde" name="article" value="<?php echo $article->article;?>">
-							
+						<textarea type="text"  placeholder="" class="form-control dde" name="article">
+							<?php echo $article->article;?>
 						</textarea>
 					</div>
 				</div>
@@ -67,7 +67,7 @@
 			</form>
 			<?php endforeach; ?>
 
-		<script src="../js/jquery.min.cs"></script>
-		<script src="../js/bootstrap.min.js"></script>
+		<script src="<?php echo site_url('js/jquery.min.cs')?>"></script>
+		<script src="<?php echo site_url('js/bootstrap.min.js')?>"></script>
 	</body>
 	</html>

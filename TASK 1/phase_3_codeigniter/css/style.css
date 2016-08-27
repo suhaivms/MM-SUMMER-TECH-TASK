@@ -112,7 +112,10 @@ footer{
 	margin-left: 92%;
 }
 
-
+.button-logout{
+	float: right;
+	margin-top: -0.75%;
+}
 
 footer a{
 
