@@ -6,8 +6,11 @@ class Login extends CI_Controller{
     
     function __construct(){
         parent::__construct();
+        $this->load->library('form_validation');
         $this->load->model("login_model");
          $this->load->helper('url_helper');
+         $this->load->helper(array('form', 'url'));
+         
     }
 
      public function index($msg = NULL){
@@ -64,14 +67,39 @@ class Login extends CI_Controller{
     }
 
 
-        public function submit()
+        public function do_upload()
         {   
             $data['title'] = $_POST['title'];
-            $data['content']= $_POST['article'];
+            $data['article']= $_POST['article'];
             $data['date']= $_POST['date'];
-            $data['image']= $_POST['image'];
+            $data['img_name']=$image;
+                    $config = array(
+                    'upload_path' => "./uploads/",
+                    'allowed_types' => "gif|jpg|png|jpeg|pdf",
+                    'overwrite' => TRUE,
+                    'max_size' => "2048000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
+                    'max_height' => "768",
+                    'max_width' => "1024"
+                );
+                $this->load->library('upload', $config);
+                 
+                $this->upload->do_upload('img_name');
+                $data_upload_files = $this->upload->data();
+
+                if($this->upload->do_upload())
+                {
+                    $data = array('upload_data' => $this->upload->data());
+                    $this->login_model->insertdetails($data);
+                    $this->load->view('pages/article',$data);
+                }
+                else
+                {
+                    $error = array('error' => $this->upload->display_errors());
+                    $this->load->view('pages/succesfull', $error);
+                }
             $this->login_model->insertdetails($data);
-            $this->load->view('pages/succesfull');
+            
+
         }
 
          public function edit_pannel()
@@ -136,5 +164,11 @@ class Login extends CI_Controller{
                 $this->login_model->update_article_id1($id,$data);
                 $this->edit1($id);
             }
+
+                
+            /*public function do_upload(){
+                $config = array(
+                    'upload_path' => "./uploads/",
+                   */
 }
 ?>

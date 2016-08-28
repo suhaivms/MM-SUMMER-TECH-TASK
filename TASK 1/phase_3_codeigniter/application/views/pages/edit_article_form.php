@@ -14,6 +14,7 @@
 			<div class="container">
 				<div class="name">
 					<h5><strong>NEWS.COM</strong></h5>
+					<a href="<?php echo site_url('index.php/login/logout'); ?>"><button class="btn btn-default button-logout"><strong>Logout</strong></button></a>
 				</div>
 				<div class="article-edit">
 					<h2><strong>EDIT ARTICLE</strong></h2>

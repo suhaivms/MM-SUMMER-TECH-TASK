@@ -15,7 +15,15 @@
   
 		<script>
 		$(function(){
-			$("#id_date").datepicker();
+			 var date = new Date();
+			 var currentMonth = date.getMonth();
+			 var currentDate = date.getDate();
+			 var currentYear = date.getFullYear();
+			 $("#id_date").datepicker({
+			 	 minDate: new Date(currentYear, currentMonth, currentDate),
+        		 dateFormat: 'yy-mm-dd'
+			 });
+			 
 		});
 		</script>
 
@@ -32,7 +40,8 @@
 				<div class="article-edit">
 					<h2><strong>NEW ARTICLE</strong></h2>
 				</div>
-			<form method="post" enctype="multipart/form-data" action="<?php echo site_url("index.php/login/submit");?>">
+				<?php echo form_open_multipart('index.php/login/do_upload');?>
+			<form method="post" enctype="multipart/form-data" action="<?php echo site_url("index.php/login/do_upload");?>">
 				<div class="row">
 					<div class="col-md-4 left-edit">
 						<h4><strong>TITLE</strong></h4>
@@ -66,12 +75,14 @@
 						<h4><strong>IMAGE</strong></h4>
 					</div>
 					<div class="col-md-8">
-					    <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-						<input type="file" class="form-control" placeholder="IMAGE" name="image" />
+
+						
+						<?php echo "<input type='file' name='userfile' size='20' />"; ?>
+						
 					</div>
 				</div>
 
-				<input type="submit" name="submit" value="SUBMIT" class="btn btn-success button-edit"/>
+				<?php echo "<input type='submit' name='submit' value='upload' class='btn btn-success button-edit'/>";?>
 			</div>
 			</form>
 		<script src="../js/jquery.min.cs"></script>

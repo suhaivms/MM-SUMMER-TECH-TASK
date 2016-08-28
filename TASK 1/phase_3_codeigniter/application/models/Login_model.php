@@ -42,7 +42,8 @@ class Login_model extends CI_Model{
 
          public function insertdetails($record) {
                 $this->db->insert('article',$record);  
-            }     
+        }  
+
          public function recentnews()
          {
                 
